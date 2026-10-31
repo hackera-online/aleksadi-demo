@@ -216,16 +216,204 @@ body{overflow-wrap:break-word;padding-left:env(safe-area-inset-left,0);padding-r
 @media(hover:none){.card:hover{transform:none;border-color:rgba(212,169,79,.4)}.gal figure:hover img{transform:none}.btn:hover{transform:none}}
 /* print */
 @media print{header,.callbar,.wave{display:none}body{background:#fff;color:#000}h1,h2,h3,.gold{color:#7a5a14;background:none;-webkit-text-fill-color:#7a5a14}}
+
+.mas{columns:3 260px;column-gap:16px;margin-top:36px}
+.mas figure{break-inside:avoid;margin:0 0 16px;position:relative;overflow:hidden;border-radius:14px;border:1.5px solid rgba(212,169,79,.6)}
+.mas img{width:100%;height:auto;transition:transform .6s}.mas figure:hover img{transform:scale(1.04)}
+.mas figcaption,.ba figcaption{position:absolute;inset:auto 0 0;padding:36px 14px 10px;background:linear-gradient(transparent,rgba(8,18,42,.95));font-family:'Marck Script',cursive;font-size:1.25rem;color:var(--gold2)}
+.ba{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:30px}
+.ba figure,.awards figure{margin:0;position:relative;overflow:hidden;border-radius:14px;border:1.5px solid rgba(212,169,79,.6)}
+.ba img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.vids{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.vids{gap:28px}
+.vw{position:relative;width:min(360px,100%);aspect-ratio:320/568;border-radius:16px;border:2px solid var(--gold);background:#000;overflow:hidden;box-shadow:0 0 60px rgba(212,169,79,.2)}
+.vw img,.vw video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vw .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;border:2px solid var(--gold);background:rgba(0,0,0,.55);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.vw .pl:after{content:"";margin-left:6px;border-style:solid;border-width:15px 0 15px 25px;border-color:transparent transparent transparent var(--gold)}
+.vw .pl:hover{background:rgba(0,0,0,.75)}
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+.awards img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.wrap>*{min-width:0}.contact img{width:100%;height:auto}
+.logo-frame img{height:auto;object-position:50% 40%}
+.logo-frame:before{border-radius:28px!important;animation:none!important;inset:-14px!important}
+.logo-frame img{border-radius:20px!important;aspect-ratio:1;object-fit:cover;height:auto}
+.ba img,.awards img,.photo img,.rev .photo img{aspect-ratio:auto!important;height:auto!important;object-fit:contain}
+.ba{align-items:start}.awards{align-items:start}
+.grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))!important;gap:22px}
+.svc{position:relative;overflow:hidden;border-radius:6px;min-height:430px;display:flex;align-items:flex-end;background:var(--ink);border:1px solid rgba(196,103,47,.5)}
+.svc>img{position:absolute;inset:0;width:100%;height:100%!important;object-fit:cover;transition:transform .6s}
+.svc:hover>img{transform:scale(1.05)}
+.svc:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 28%,rgba(8,18,42,.88) 66%,rgba(8,18,42,.97))}
+.svc-b{position:relative;z-index:1;padding:26px 22px 24px;display:grid;gap:10px;justify-items:start}
+.svc h3{font:700 1.45rem/1.15 'Playfair Display',serif;color:#fff;text-transform:uppercase;letter-spacing:.02em}
+.svc p{font-size:.95rem;color:#e6e9f2;margin:0}
+.svc-btn{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;padding:10px 24px;border:1.5px solid #fff;border-radius:50px;color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;transition:background .2s,color .2s}
+.svc-btn:hover{background:var(--g);color:var(--ink);border-color:transparent}
+@media(max-width:600px){.svc{min-height:380px}}
+@media(hover:none){.svc:hover>img{transform:none}}
+/* uniform photo sizes */
+.mas{columns:auto!important;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.mas figure{margin:0!important;aspect-ratio:1/1}
+.mas img{width:100%;height:100%!important;object-fit:cover}
+.ba,.awards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.ba figure,.awards figure{aspect-ratio:4/5;background:var(--ink);display:grid}
+.ba img,.awards img,.ba figure img,.awards figure img{aspect-ratio:4/5!important;width:100%;height:100%!important;object-fit:contain!important}
+@media(max-width:600px){.mas{grid-template-columns:1fr 1fr;gap:10px}}
+
+/* ===== upholstery theme ===== */
+.orn:before,.orn:after{height:0!important;background:none!important;border-top:2px dashed var(--gold)}
+.orn:before{border-image:none}
+.ribbon{overflow:hidden;background:var(--ink);padding:14px 0;border-block:1px solid rgba(212,169,79,.35)}
+.rtrack{display:flex;gap:10px;width:max-content;animation:rib 60s linear infinite}
+.rtrack i{flex:none;width:92px;height:46px;border-radius:6px;background:repeating-linear-gradient(45deg,rgba(0,0,0,.14) 0 2px,transparent 2px 5px),repeating-linear-gradient(-45deg,rgba(255,255,255,.1) 0 2px,transparent 2px 5px),var(--c);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.2),0 2px 6px rgba(0,0,0,.4)}
+@keyframes rib{to{transform:translateX(-33.333%)}}
+.dam{background:radial-gradient(800px 420px at 80% 10%,rgba(196,103,47,.22) 0,transparent 70%),radial-gradient(700px 420px at 10% 90%,rgba(30,107,87,.28) 0,transparent 70%),var(--navy)}
+.dgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.dsofa{background:radial-gradient(circle at 50% 40%,#2a3f78 0,#13264f 70%);border:2px solid var(--gold);border-radius:24px;padding:22px;box-shadow:0 0 70px rgba(212,169,79,.18)}
+.dsofa svg{width:100%;height:auto;display:block}
+.fab{fill:var(--fab,#7d1f3a);transition:fill .45s}
+.dpick h3{font-size:2rem;margin-bottom:14px}
+.sws{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px}
+.sw{aspect-ratio:1;border-radius:50%;border:3px solid rgba(255,255,255,.25);cursor:pointer;min-height:44px;background:repeating-linear-gradient(45deg,rgba(0,0,0,.16) 0 2px,transparent 2px 5px),repeating-linear-gradient(-45deg,rgba(255,255,255,.1) 0 2px,transparent 2px 5px),var(--c);transition:transform .2s,border-color .2s}
+.sw:hover{transform:scale(1.08)}.sw.on{border-color:var(--gold2);box-shadow:0 0 0 4px rgba(243,217,143,.3)}
+.dnote{color:var(--muted);margin-bottom:22px}
+@media(max-width:860px){.dgrid{grid-template-columns:1fr;text-align:center}.dpick .cta{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.rtrack{animation:none}}
+/* stitched card edges */
+.svc:before{content:"";position:absolute;inset:9px;z-index:2;border:1.5px dashed rgba(255,255,255,.5);border-radius:3px;pointer-events:none}
+.mas figure:before{content:"";position:absolute;inset:7px;z-index:2;border:1.5px dashed rgba(255,255,255,.45);border-radius:8px;pointer-events:none}
+/* colourful value cards */
+.vals .val:nth-child(1){background:linear-gradient(180deg,#7d1f3a,#3d1020);border-color:#c4687f}
+.vals .val:nth-child(2){background:linear-gradient(180deg,#1e6b57,#0f3a30);border-color:#4fae95}
+.vals .val:nth-child(3){background:linear-gradient(180deg,#c4672f,#6e3412);border-color:#f0a773}
+.vals .val:nth-child(4){background:linear-gradient(180deg,#2a4f9c,#13264f);border-color:#7ba0ee}
+.vals .val p{color:#f3ede2}.vals .val h3{color:#fff}
+.vals .val{position:relative;border-width:2px;outline:1.5px dashed rgba(255,255,255,.4);outline-offset:-9px}
+
+/* why section */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why-c{position:relative;padding:34px 26px 30px;border-radius:18px;color:#fff;outline:1.5px dashed rgba(255,255,255,.4);outline-offset:-10px;border:2px solid var(--b);background:linear-gradient(165deg,var(--a),var(--d));box-shadow:0 18px 40px rgba(0,0,0,.35);transition:transform .25s}
+.why-c:hover{transform:translateY(-6px)}
+.why-c:nth-child(1){--a:#8b2543;--d:#3d1020;--b:#c4687f}
+.why-c:nth-child(2){--a:#237a63;--d:#0f3a30;--b:#4fae95}
+.why-c:nth-child(3){--a:#d2763a;--d:#6e3412;--b:#f0a773}
+.why-c:nth-child(4){--a:#2f58ab;--d:#13264f;--b:#7ba0ee}
+.why-c:nth-child(5){--a:#6b3f8f;--d:#2c1646;--b:#b48ad6}
+.why-c:nth-child(6){--a:#b8862a;--d:#5a3d0c;--b:#f3d98f}
+.why-i{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.5);margin-bottom:18px}
+.why-i svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.why-c h3{color:#fff;font-size:1.3rem;margin-bottom:10px}
+.why-c p{color:#f6efe4;font-size:.96rem;margin:0}
+.why-cta{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:46px;text-align:center}
+.why-cta .script{font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--gold2)}
+@media(max-width:960px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.why{grid-template-columns:1fr}}
+@media(hover:none){.why-c:hover{transform:none}}
+/* contact without banner */
+.contact .wrap{grid-template-columns:1fr!important;text-align:center;justify-items:center}
+.contact h2{text-align:center!important}.contact .orn{margin-inline:auto!important;justify-content:center!important}.contact .orn:before{display:block!important}
+.contact .rows{justify-items:center}
+
+/* header: one row on desktop, nicer call button */
+header nav a{white-space:nowrap}
+@media(min-width:861px){nav ul{gap:clamp(12px,1.6vw,26px)}nav a{font-size:clamp(.82rem,1.05vw,.94rem)}}
+@media(min-width:861px) and (max-width:1060px){
+ .menu{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;padding:0 11px;background:transparent;border:1.5px solid var(--gold);border-radius:10px;cursor:pointer}
+ .menu span{display:block;height:2px;background:var(--gold2);border-radius:2px;transition:transform .2s,opacity .2s}
+ .menu[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+ .menu[aria-expanded=true] span:nth-child(2){opacity:0}
+ .menu[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+ .nav{position:relative}.nav .brand{margin-right:auto}
+ nav{position:absolute;left:calc(-1*clamp(16px,4vw,32px));right:calc(-1*clamp(16px,4vw,32px));top:100%;background:var(--ink);border-bottom:2px solid var(--gold);display:none;max-height:calc(100dvh - 70px);overflow:auto}
+ nav.open{display:block}
+ nav ul{display:flex;flex-direction:column;gap:0;padding:6px 0}
+ nav li a{display:flex;align-items:center;padding:14px clamp(16px,4vw,32px);font-size:1.05rem;border-top:1px solid rgba(212,169,79,.2)}
+}
+.hphone{gap:10px;padding:11px 26px 11px 20px;font-weight:700;letter-spacing:.02em;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 8px 24px rgba(212,169,79,.35)}
+.hphone svg{width:20px;height:20px;fill:var(--ink);flex:none;animation:ring 2.6s ease-in-out infinite;transform-origin:50% 50%}
+.hphone:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes ring{0%,60%,100%{transform:rotate(0)}66%{transform:rotate(-16deg)}72%{transform:rotate(14deg)}78%{transform:rotate(-12deg)}84%{transform:rotate(8deg)}}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+@media(prefers-reduced-motion:reduce){.hphone svg,.hphone:after{animation:none}}
+
+/* floating call button (mobile) */
+.callfab{display:none}
+@media(max-width:860px){.callfab{display:grid;place-items:center;position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:62px;height:62px;border:0;border-radius:50%;cursor:pointer;background:var(--g);box-shadow:0 10px 28px rgba(0,0,0,.5),0 0 0 3px rgba(243,217,143,.35);animation:pulse 2.4s ease-out infinite}
+.callfab svg{width:28px;height:28px;fill:var(--ink)}
+footer{padding-bottom:90px}}
+@keyframes pulse{0%{box-shadow:0 10px 28px rgba(0,0,0,.5),0 0 0 0 rgba(243,217,143,.6)}80%,100%{box-shadow:0 10px 28px rgba(0,0,0,.5),0 0 0 22px rgba(243,217,143,0)}}
+@media(prefers-reduced-motion:reduce){.callfab{animation:none}}
+
+/* footer */
+footer .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:10px}footer .fm{padding-top:12px;border-top:1px solid rgba(212,169,79,.25);width:min(260px,80%)}
+footer .fc{color:var(--muted)}
+footer .fm a{color:var(--gold2);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(243,217,143,.4)}
+footer .fm{color:var(--muted)}
+@media(max-width:600px){footer{padding:26px 0 96px!important}footer .wrap{flex-direction:column;justify-content:center;text-align:center;gap:10px}footer .fm{padding-top:12px;border-top:1px solid rgba(212,169,79,.25);width:min(260px,80%)}}
+
+/* AI chat */
+.cfab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;padding:12px 20px;border:0;border-radius:50px;background:var(--g);color:var(--ink);font:600 .95rem Montserrat,sans-serif;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.cbox{position:fixed;right:18px;bottom:18px;z-index:70;width:min(380px,calc(100vw - 24px));height:min(560px,calc(100dvh - 24px));display:none;flex-direction:column;background:var(--ink);border:1.5px solid var(--gold);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.cbox.open{display:flex}
+.chd{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--navy2);border-bottom:1px solid rgba(212,169,79,.4);color:var(--gold2);font-weight:600}
+.chd button{background:none;border:0;color:var(--gold2);font-size:1.5rem;cursor:pointer;min-height:44px;min-width:44px}
+.cmsgs{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:86%;padding:10px 14px;border-radius:14px;font-size:.93rem;line-height:1.5}
+.m.b{background:var(--navy2);border:1px solid rgba(212,169,79,.3);align-self:flex-start}
+.m.u{background:var(--g);color:var(--ink);align-self:flex-end}
+.m a{color:var(--gold2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.chips button{background:transparent;border:1px solid var(--gold);color:var(--gold2);border-radius:20px;padding:6px 12px;font-size:.8rem;cursor:pointer}
+.cf{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(212,169,79,.3)}
+.cf input{flex:1;min-width:0;padding:12px 14px;border-radius:24px;border:1px solid rgba(212,169,79,.5);background:var(--navy);color:var(--text);font:inherit;font-size:16px}
+.cf button{border:0;border-radius:24px;padding:0 18px;background:var(--g);color:var(--ink);font-weight:600;cursor:pointer}
+@media(max-width:860px){.cfab{bottom:84px}}
+
+/* ===== COLOUR ACCENTS: copper, cream, burgundy ===== */
+:root{--cu:#c4672f;--cu2:#e8955a;--wine:#3d1020;--wine2:#5a1a30;--cream:#f4ecdc;--cream2:#fffaf0}
+.kicker{border-color:var(--cu2);color:var(--cu2)}
+.btn.ghost{border-color:var(--cu2);color:var(--cu2)}
+.strip li+li:before{color:var(--cu2)}
+.card{border-color:rgba(196,103,47,.55)}.card:hover{border-color:var(--cu2)}
+.card:before,.card:after{border-color:var(--cu2)}.card svg{stroke:var(--cu2)}
+.orn i{background:linear-gradient(180deg,#f0a773,#c4672f 60%,#8a3f14);box-shadow:0 0 0 3px rgba(196,103,47,.28)}
+.val{border-color:rgba(196,103,47,.5)}
+.ticks li:before{background:linear-gradient(180deg,#f0a773,#c4672f)}
+/* burgundy band: "Как работим" */
+section.band:not([id]){background:radial-gradient(700px 360px at 15% 0,var(--wine2) 0,transparent 70%),var(--wine);border-block:1px solid rgba(196,103,47,.45)}
+section.band:not([id]) .steps li:before{background:linear-gradient(180deg,#f0a773,#c4672f 60%,#8a3f14);color:#fff;box-shadow:0 0 0 7px rgba(232,149,90,.2)}
+section.band:not([id]) .steps h3{color:var(--gold2)}section.band:not([id]) .steps p,section.band:not([id]) .lead{color:#e3cdd3}
+/* cream sections: materials and FAQ */
+#materiali,#vaprosi{background:var(--cream);color:#1a2748}
+#materiali h2,#vaprosi h2{background:linear-gradient(180deg,#b88d35,#7a5a14);-webkit-background-clip:text;background-clip:text;color:transparent}
+#materiali .ticks{color:#1a2748;font-weight:500}
+#materiali .ticks li:before{background:linear-gradient(180deg,#d9a441,#9a6f1c)}
+#vaprosi details{background:var(--cream2);border-color:rgba(143,109,39,.4)}
+#vaprosi summary{color:#13264f}#vaprosi summary:after{color:var(--cu)}
+#vaprosi details p{color:#3d4a68}
+#materiali .orn:before,#materiali .orn:after,#vaprosi .orn:before,#vaprosi .orn:after{background:linear-gradient(90deg,transparent,#b88d35)}
+/* copper edge on the contact block */
+.contact{border-top-color:var(--cu)}
+.cfab{background:linear-gradient(180deg,#f0a773,#c4672f 60%,#a04f1c);color:#fff}
+
+.zoomable{cursor:zoom-in}
+#lbx{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px}
+#lbx.on{display:flex}
+#lbx img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 10px 50px rgba(0,0,0,.6)}
+#lbx button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#lbx button:hover{background:rgba(255,255,255,.25)}
+#lbx .x{top:14px;right:14px}#lbx .p{left:14px;top:50%;transform:translateY(-50%)}#lbx .n{right:14px;top:50%;transform:translateY(-50%)}
+#lbx.single .p,#lbx.single .n{display:none}
 </style>
 </head>
 <body>
 <header>
  <div class="wrap nav">
-  <a class="brand gold" href="/" aria-label="Алекс Ади – начало"><img src="/assets/logo.jpg" alt="Лого на Алекс Ади" width="48" height="48"><span>Алекс Ади</span></a>
+  <a class="brand gold" href="/" aria-label="Алекс Ади – начало"><img src="/assets/logo.jpg" alt="Лого на Алекс Ади" width="48" height="48"></a>
   <nav id="nav" aria-label="Основна навигация"><ul>
-   <li><a href="#uslugi">Услуги</a></li><li><a href="#materiali">Материали</a></li><li><a href="#galeria">Работата ни</a></li><li><a href="#vaprosi">Въпроси</a></li><li><a href="#kontakti">Контакти</a></li>
+   <li><a href="#uslugi">Услуги</a></li><li><a href="#materiali">Материали</a></li><li><a href="#damaski">Дамаски</a></li><li><a href="#zashto">Защо ние</a></li><li><a href="#galeria">Работата ни</a></li><li><a href="#predi">Преди и след</a></li><li><a href="#video">Видео</a></li><li><a href="#vaprosi">Въпроси</a></li><li><a href="#kontakti">Контакти</a></li>
   </ul></nav>
-  <a class="btn hphone" href="tel:+359894371333">0894 371 333</a>
+  <a class="btn hphone" href="tel:+359894371333"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Обади се</a>
   <button class="menu" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
  </div>
 </header>
@@ -234,44 +422,81 @@ body{overflow-wrap:break-word;padding-left:env(safe-area-inset-left,0);padding-r
 <div class="hero">
  <div class="wrap">
   <div>
-   <span class="kicker">Алекс Ади ЕООД · гр. София</span>
    <h1 class="gold">Тапицерски услуги в София</h1>
    <p class="script">Дайте нов живот на старите мебели!</p>
    <p class="sub">Претапициране и реставрация на дивани, сепарета, фотьойли, столове и матраци. Изработка по поръчка за домове, хотели, ресторанти и офиси – с висококласни дамаски и кожи.</p>
    <div class="cta"><a class="btn" href="tel:+359894371333">Поискайте оферта</a><a class="btn ghost" href="#galeria">Вижте работата ни</a></div>
   </div>
-  <div class="logo-frame"><img src="/assets/logo.jpg" alt="Златно лого AA с диван, чук и ножица – Алекс Ади тапицерски услуги" width="640" height="640" fetchpriority="high"></div>
+  <div class="logo-frame"><img src="/assets/work/hero-square.jpg" alt="Реставриран барок фотьойл – Алекс Ади тапицерски услуги" width="1000" height="1000" fetchpriority="high"></div>
  </div>
  <div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 70C300 10 560 120 900 70S1300 0 1440 40V120H0Z" fill="#08122a"/><path d="M0 70C300 10 560 120 900 70S1300 0 1440 40" fill="none" stroke="#d4a94f" stroke-width="4"/></svg></div>
 </div>
-<div class="strip"><div class="wrap"><ul><li>Качество</li><li>Комфорт</li><li>Стил</li></ul></div></div>
+<div class="strip"><div class="wrap"><ul><li>Качество</li><li>Комфорт</li><li>Стил</li><li>Безплатен оглед и транспорт</li></ul></div></div>
+<div class="ribbon" aria-hidden="true"><div class="rtrack"><i style="--c:#7d1f3a"></i><i style="--c:#1e6b57"></i><i style="--c:#1d3a7c"></i><i style="--c:#d29a2b"></i><i style="--c:#c4672f"></i><i style="--c:#d9a7a0"></i><i style="--c:#7b8190"></i><i style="--c:#e8dcc2"></i><i style="--c:#5a3a2a"></i><i style="--c:#1f5f6b"></i><i style="--c:#7d1f3a"></i><i style="--c:#1e6b57"></i><i style="--c:#1d3a7c"></i><i style="--c:#d29a2b"></i><i style="--c:#c4672f"></i><i style="--c:#d9a7a0"></i><i style="--c:#7b8190"></i><i style="--c:#e8dcc2"></i><i style="--c:#5a3a2a"></i><i style="--c:#1f5f6b"></i><i style="--c:#7d1f3a"></i><i style="--c:#1e6b57"></i><i style="--c:#1d3a7c"></i><i style="--c:#d29a2b"></i><i style="--c:#c4672f"></i><i style="--c:#d9a7a0"></i><i style="--c:#7b8190"></i><i style="--c:#e8dcc2"></i><i style="--c:#5a3a2a"></i><i style="--c:#1f5f6b"></i></div></div>
+
 
 <section id="uslugi">
  <div class="wrap">
   <h2 class="gold">Нашите услуги</h2><div class="orn"><i></i></div>
   <p class="lead">От един стол до цялостно обзавеждане на заведение – връщаме блясъка и комфорта на вашите мебели.</p>
   <div class="grid">
-   <article class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24v-6a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v6M4 28a4 4 0 0 1 8 0v4h24v-4a4 4 0 0 1 8 0v8H4zM10 40v3M38 40v3"/></svg><h3>Претапициране на дивани и сепарета</h3><p>Нов дунапрен, подмяна на платове и механизми – диванът ви става като нов.</p></article>
-   <article class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h20l2 20H12zM10 26h28v8H10zM12 34v9M36 34v9"/></svg><h3>Фотьойли и столове</h3><p>Реставрация на класически и модерни модели с запазване на формата и стила.</p></article>
-   <article class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="22" width="40" height="12" rx="2"/><path d="M8 22v-7a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v7M8 34v5M40 34v5"/></svg><h3>Матраци</h3><p>Обновяване и изработка на матраци по ваш размер.</p></article>
-   <article class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 42V8h28v34M16 14h4M24 14h4M16 21h4M24 21h4M16 28h4M24 28h4M20 42v-8h8v8"/></svg><h3>Хотели, ресторанти, офиси</h3><p>Тапицерия за обекти с материали за интензивна употреба.</p></article>
-   <article class="card"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40L40 8M30 6l12 12M6 30l12 12"/></svg><h3>Изработка по поръчка</h3><p>Дивани по ваш размер, вкус и избрана дамаска.</p></article>
-  </div>
+   <article class="svc"><img src="/assets/work/corner-grey.jpg" alt="Дивани и холни гарнитури" loading="lazy"><div class="svc-b"><h3>Дивани и холни гарнитури</h3><p>Нов облик и познатия комфорт. Дамаски, еко кожа и естествена кожа за вашия диван.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/armchairs.jpg" alt="Фотьойли и кресла" loading="lazy"><div class="svc-b"><h3>Фотьойли и кресла</h3><p>Класически и модерни модели – с капитониране, бароков стил и точно по формата им.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/chairs-black.jpg" alt="Столове" loading="lazy"><div class="svc-b"><h3>Столове</h3><p>От любимия стол до целия комплект. Нова тапицерия за дома и за заведението.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/bed.jpg" alt="Легла, спални и матраци" loading="lazy"><div class="svc-b"><h3>Легла, спални и матраци</h3><p>Тапицирани легла и табли по размер, обновяване и изработка на матраци.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/before-after-floral.jpg" alt="Реставрация на стари мебели" loading="lazy"><div class="svc-b"><h3>Реставрация на стари мебели</h3><p>Запазваме характера и връщаме красотата на мебели със собствена история.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/sofas.jpg" alt="Луксозни дивани по поръчка" loading="lazy"><div class="svc-b"><h3>Луксозни дивани по поръчка</h3><p>Индивидуални проекти по размер, високо качество на изработка и шивашки услуги.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/booth.jpg" alt="Ресторанти, хотели и офиси" loading="lazy"><div class="svc-b"><h3>Ресторанти, хотели и офиси</h3><p>Сепарета, седалки и столове за интензивна употреба в бизнес обекти.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/panels.jpg" alt="Тапицирани панели" loading="lazy"><div class="svc-b"><h3>Тапицирани панели</h3><p>Стенни облицовки от кожа и еко кожа за заведения и домове.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   <article class="svc"><img src="/assets/work/barber.jpg" alt="Бръснарски и фризьорски столове" loading="lazy"><div class="svc-b"><h3>Бръснарски и фризьорски столове</h3><p>Претапициране на професионални столове за салони и бръснарници.</p><a class="svc-btn" href="tel:+359894371333">Научи повече</a></div></article>
+   </div>
  </div>
 </section>
 
 <section class="band" id="materiali">
- <div class="wrap split">
+ <div class="wrap" style="max-width:860px">
   <div>
-   <h2 class="gold">Работим с висококласни материали</h2><div class="orn"><i></i></div>
+   <h2 class="gold" style="text-align:center">Работим с висококласни материали</h2><div class="orn"><i></i></div>
    <ul class="ticks">
     <li>Висококачествени дунапрени</li><li>Силиконов пух и вати</li><li>Богат избор от дамаски</li><li>Еко кожа и естествена кожа</li>
     <li>Дамаски с UV защита от слънце</li><li>Водоустойчиви и лесни за почистване</li><li>Повишена пожароустойчивост</li><li>Защита от петна и ежедневно натоварване</li>
    </ul>
   </div>
-  <div class="photo"><img src="/assets/workshop.jpg" alt="Работилница с мостри на дамаски и демонтирани седалки за претапициране" width="1400" height="1050" loading="lazy"></div>
  </div>
 </section>
+
+<section id="damaski" class="dam">
+ <div class="wrap">
+  <h2 class="gold">Изберете своята дамаска</h2><div class="orn"><i></i></div>
+  <p class="lead">Дамаски, еко кожи и естествени кожи в десетки цветове. Докоснете цвят и вижте как ще изглежда дивана ви.</p>
+  <div class="dgrid">
+   <div class="dsofa">
+    <svg viewBox="0 0 600 340" role="img" aria-label="Диван в избрания цвят">
+     <defs>
+      <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 0L6 6M6 0L0 6" stroke="#000" stroke-opacity=".18" stroke-width=".8"/></pattern>
+      <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></linearGradient>
+      <g id="body"><rect x="80" y="30" width="440" height="170" rx="46"/><rect x="26" y="110" width="104" height="170" rx="44"/><rect x="470" y="110" width="104" height="170" rx="44"/><rect x="104" y="180" width="392" height="100" rx="30"/></g>
+     </defs>
+     <ellipse cx="300" cy="312" rx="270" ry="14" fill="#000" opacity=".35"/>
+     <g fill="#2b1a10"><rect x="54" y="278" width="20" height="34" rx="4"/><rect x="526" y="278" width="20" height="34" rx="4"/><rect x="150" y="278" width="20" height="30" rx="4"/><rect x="430" y="278" width="20" height="30" rx="4"/></g>
+     <use href="#body" class="fab" stroke="#000" stroke-opacity=".35" stroke-width="2"/>
+     <use href="#body" fill="url(#weave)"/>
+     <path d="M300 186V278" stroke="#000" stroke-opacity=".4" stroke-width="2.5" fill="none"/>
+     <g fill="#000" fill-opacity=".45"><circle cx="150" cy="80" r="5"/><circle cx="230" cy="80" r="5"/><circle cx="310" cy="80" r="5"/><circle cx="390" cy="80" r="5"/><circle cx="450" cy="80" r="5"/><circle cx="190" cy="125" r="5"/><circle cx="270" cy="125" r="5"/><circle cx="350" cy="125" r="5"/><circle cx="420" cy="125" r="5"/></g>
+     <g stroke="#000" stroke-opacity=".2" stroke-width="1.5" fill="none"><path d="M150 80L190 125L230 80L270 125L310 80L350 125L390 80L420 125L450 80"/></g>
+    </svg>
+   </div>
+   <div class="dpick">
+    <h3 id="dname">Бордо</h3>
+    <div class="sws" role="group" aria-label="Цветове"><button type="button" class="sw on" data-c="#7d1f3a" data-n="Бордо" style="--c:#7d1f3a" aria-label="Бордо"></button><button type="button" class="sw" data-c="#1e6b57" data-n="Изумруд" style="--c:#1e6b57" aria-label="Изумруд"></button><button type="button" class="sw" data-c="#1d3a7c" data-n="Нощно синьо" style="--c:#1d3a7c" aria-label="Нощно синьо"></button><button type="button" class="sw" data-c="#d29a2b" data-n="Горчица" style="--c:#d29a2b" aria-label="Горчица"></button><button type="button" class="sw" data-c="#c4672f" data-n="Теракота" style="--c:#c4672f" aria-label="Теракота"></button><button type="button" class="sw" data-c="#d9a7a0" data-n="Пудра" style="--c:#d9a7a0" aria-label="Пудра"></button><button type="button" class="sw" data-c="#7b8190" data-n="Сиво" style="--c:#7b8190" aria-label="Сиво"></button><button type="button" class="sw" data-c="#e8dcc2" data-n="Слонова кост" style="--c:#e8dcc2" aria-label="Слонова кост"></button><button type="button" class="sw" data-c="#5a3a2a" data-n="Шоколад" style="--c:#5a3a2a" aria-label="Шоколад"></button><button type="button" class="sw" data-c="#1f5f6b" data-n="Петрол" style="--c:#1f5f6b" aria-label="Петрол"></button></div>
+    <p class="dnote">Имаме мостри при огледа. Дамаските са устойчиви на домашни любимци, със защита от слънце и водоустойчиви.</p>
+    <div class="cta"><a class="btn" href="tel:+359894371333">Поискайте мостри</a></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
 
 <section>
  <div class="wrap split rev">
@@ -297,26 +522,60 @@ body{overflow-wrap:break-word;padding-left:env(safe-area-inset-left,0);padding-r
  </div>
 </section>
 
-<section>
+<section id="zashto">
  <div class="wrap">
   <h2 class="gold">Защо Алекс Ади</h2><div class="orn"><i></i></div>
-  <div class="vals" style="margin-top:36px">
-   <div class="val"><h3>Качество на първо място</h3><p>Подбрани материали и прецизно изпълнение.</p></div>
-   <div class="val"><h3>Гаранция</h3><p>За удовлетворение от свършената работа.</p></div>
-   <div class="val"><h3>Професионализъм</h3><p>Внимание към детайла във всяка поръчка.</p></div>
-   <div class="val"><h3>По ваш вкус и размер</h3><p>Вие избирате – ние създаваме!</p></div>
-  </div>
+  <p class="lead">Тапицерски услуги за дома и бизнеса – с качествени материали, внимание към детайла и лично отношение към всяка поръчка.</p>
+  <div class="why">
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l5 12 13 1-10 9 3 13-11-7-11 7 3-13L6 18l13-1z"/></svg></span><h3>Качество на първо място</h3><p>Подбираме дунапрени, пух и дамаски, които издържат години ежедневна употреба. Всяка мебел се изработва с внимание към шевовете, ъглите и формата.</p></article>
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 17-16 22C15 39 8 32 8 22V10zM17 24l5 5 9-10"/></svg></span><h3>Гаранция за удовлетворение</h3><p>Работата не е приключила, докато не сте доволни от резултата. Затова уговаряме всичко предварително – материал, цвят и размер.</p></article>
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 12h26v22H4zM30 20h9l5 7v7H30zM12 38a4 4 0 1 0 .1 0M36 38a4 4 0 1 0 .1 0"/></svg></span><h3>Безплатен оглед и транспорт</h3><p>Идваме при вас, оглеждаме мебелта, казваме ориентировъчна цена и я вземаме за работилницата. Без излишно губене на време.</p></article>
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="3"/><path d="M6 20h36M6 29h36M18 10v28M30 10v28"/></svg></span><h3>Богат избор на материали</h3><p>Дамаски, еко кожи и естествени кожи – устойчиви на домашни любимци, със защита от слънце и водоустойчиви.</p></article>
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40L40 8M30 6l12 12M6 30l12 12"/></svg></span><h3>По ваш вкус и размер</h3><p>Индивидуални проекти и луксозни дивани по поръчка. Вие избирате модел, размер и цвят – ние създаваме!</p></article>
+   <article class="why-c"><span class="why-i"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 42V8h28v34M16 14h4M24 14h4M16 21h4M24 21h4M16 28h4M24 28h4M20 42v-8h8v8"/></svg></span><h3>За дома и за бизнеса</h3><p>Хотели, ресторанти, кафенета и офиси: сепарета, седалки и столове, изработени за интензивна употреба.</p></article>
+   </div>
+  <div class="why-cta"><p class="script">Ние създаваме!</p><a class="btn" href="tel:+359894371333">Поискайте безплатен оглед</a></div>
  </div>
 </section>
 
 <section class="band" id="galeria">
  <div class="wrap">
   <h2 class="gold">Работата ни</h2><div class="orn"><i></i></div>
-  <div class="gal" style="margin-top:36px">
-   <figure class="tall"><img src="/assets/interior.jpg" alt="Обзаведено заведение със сепарета и столове" width="1400" height="788" loading="lazy"><figcaption>Сепарета и столове за заведение</figcaption></figure>
-   <figure><img src="/assets/workshop.jpg" alt="Тапицерска работилница с мостри на платове" width="1400" height="1050" loading="lazy"><figcaption>В работилницата</figcaption></figure>
-   <figure><img src="/assets/banner.jpg" alt="Реклама: върнете живота на вашите мебели" width="1400" height="788" loading="lazy"><figcaption>Върнете живота на мебелите си</figcaption></figure>
-   <figure class="wide"><img src="/assets/van.jpg" alt="Фирмен бус на Алекс Ади ЕООД с тапицерски услуги" width="1600" height="1067" loading="lazy" style="aspect-ratio:16/7"><figcaption>Идваме при вас – София и цялата страна</figcaption></figure>
+  <p class="lead">Реални проекти на Алекс Ади – от домашни фотьойли до цели заведения.</p>
+  <div class="mas"><figure><img src="/assets/work/armchairs.jpg" alt="Фотьойли с капитониране – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/booth.jpg" alt="Сепарета за заведение – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/corner-grey.jpg" alt="Ъглов диван по поръчка – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/armchair-orange.jpg" alt="Барокови фотьойли – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/bed.jpg" alt="Тапицирано легло – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/white-sofas.jpg" alt="Дивани в бежово – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/lounge.jpg" alt="Мека мебел за лаундж – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/barber.jpg" alt="Бръснарски стол – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/corner-brown.jpg" alt="Релакс ъгъл – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/sofas.jpg" alt="Нови дивани – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/panels.jpg" alt="Тапицирани панели – Алекс Ади" loading="lazy"></figure><figure><img src="/assets/work/leather.jpg" alt="Естествена кожа – Алекс Ади" loading="lazy"></figure></div>
+ </div>
+</section>
+
+<section id="predi">
+ <div class="wrap">
+  <h2 class="gold">Преди и след</h2><div class="orn"><i></i></div>
+  <p class="lead">Старата мебел може да изглежда като нова.</p>
+  <div class="ba">
+   <figure><img src="/assets/work/before-after-corner.jpg" alt="Ъглов диван преди и след претапициране" loading="lazy"><figcaption>Ъглов диван – преди и след</figcaption></figure>
+   <figure><img src="/assets/work/before-after-floral.jpg" alt="Диван преди и след претапициране" loading="lazy"><figcaption>Диван – преди и след</figcaption></figure>
+   <figure><img src="/assets/work/sofa-restore.jpg" alt="Реставрация на ъглов диван" loading="lazy"><figcaption>Реставрация стъпка по стъпка</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="band" id="video">
+ <div class="wrap">
+  <h2 class="gold">Видео от работилницата</h2><div class="orn"><i></i></div>
+  <div class="vids">
+   <div class="vw" data-src="/assets/video/v1.mp4"><img src="/assets/video/v1.jpg" alt="Видео от работилницата на Алекс Ади – 1" loading="lazy"><button class="pl" type="button" aria-label="Пусни видеото"></button></div>
+   <div class="vw" data-src="/assets/video/v2.mp4"><img src="/assets/video/v2.jpg" alt="Видео от работилницата на Алекс Ади – 2" loading="lazy"><button class="pl" type="button" aria-label="Пусни видеото"></button></div>
+  </div>
+ </div>
+</section>
+
+<section id="nagradi">
+ <div class="wrap">
+  <h2 class="gold">Отличия и награди</h2><div class="orn"><i></i></div>
+  <p class="lead">Признание за качество и доверие от клиентите.</p>
+  <div class="awards">
+   <figure><img src="/assets/work/star.jpg" alt="Награда Отличие 2025 – Алекс Ади ЕООД" loading="lazy"></figure>
+   <figure><img src="/assets/work/award-frame.jpg" alt="Златна фирмена награда 2025" loading="lazy"></figure>
+   <figure><img src="/assets/work/diploma.jpg" alt="Диплом за отлично качество" loading="lazy"></figure>
   </div>
  </div>
 </section>
@@ -325,11 +584,12 @@ body{overflow-wrap:break-word;padding-left:env(safe-area-inset-left,0);padding-r
  <div class="wrap">
   <h2 class="gold">Често задавани въпроси</h2><div class="orn"><i></i></div>
   <div class="faq" style="margin-top:34px">
-   <details><summary>Колко струва претапицирането на диван?</summary><p>Цената зависи от размера, състоянието на дунапрена и избраната дамаска или кожа. Обадете се на 0894 371 333 и ще получите ориентировъчна оферта още по телефона.</p></details>
-   <details><summary>Колко време отнема претапицирането?</summary><p>Обикновено един диван или фотьойл са готови в рамките на няколко дни, а големите обекти за заведения и хотели се договарят с график.</p></details>
-   <details><summary>Мога ли да избера сам дамаската?</summary><p>Да. Разполагаме с богат избор от дамаски, еко кожа и естествена кожа, включително водоустойчиви, лесни за почистване и пожароустойчиви материали.</p></details>
-   <details><summary>Работите ли за заведения, хотели и офиси?</summary><p>Да, изработваме и претапицираме сепарета, седалки и столове за ресторанти, кафенета, хотели и офиси с материали за интензивна употреба.</p></details>
-   <details><summary>Извършвате ли услугата извън София?</summary><p>Базирани сме в София и работим и в цялата страна по договаряне.</p></details>
+   <details open><summary>Безплатен ли е огледът и транспортът?</summary><p>Да. Огледът и транспортът са безплатни – обадете се и уговаряме удобен час.</p></details>
+   <details open><summary>Колко струва претапицирането на диван?</summary><p>Цената зависи от размера, състоянието на дунапрена и избраната дамаска или кожа. Обадете се на 0894 371 333 и ще получите ориентировъчна оферта още по телефона.</p></details>
+   <details open><summary>Колко време отнема претапицирането?</summary><p>Обикновено един диван или фотьойл са готови в рамките на няколко дни, а големите обекти за заведения и хотели се договарят с график.</p></details>
+   <details open><summary>Мога ли да избера сам дамаската?</summary><p>Да. Разполагаме с богат избор от дамаски, еко кожа и естествена кожа, включително водоустойчиви, лесни за почистване и пожароустойчиви материали.</p></details>
+   <details open><summary>Работите ли за заведения, хотели и офиси?</summary><p>Да, изработваме и претапицираме сепарета, седалки и столове за ресторанти, кафенета, хотели и офиси с материали за интензивна употреба.</p></details>
+   <details open><summary>Извършвате ли услугата извън София?</summary><p>Базирани сме в София и работим и в цялата страна по договаряне.</p></details>
   </div>
  </div>
 </section>
@@ -341,18 +601,29 @@ body{overflow-wrap:break-word;padding-left:env(safe-area-inset-left,0);padding-r
    <a class="phone gold" href="tel:+359894371333">0894 371 333</a>
    <div class="rows">
     <div><b>Лице за контакт:</b> Антон Борисов</div>
-    <div><b>Град:</b> София</div>
-    <div><b>Фирма:</b> Алекс Ади ЕООД</div>
+    
+    
    </div>
-   <p class="script" style="margin-top:22px;font-size:1.7rem;color:var(--gold2)">Вие избирате – ние създаваме!</p>
+   <p class="script" style="margin-top:22px;font-size:1.7rem;color:var(--gold2)">Ние създаваме!</p>
   </div>
-  <img src="/assets/banner.jpg" alt="Тапицерски услуги – върнете живота на вашите мебели, тел. 0894 371 333" width="1400" height="788" loading="lazy">
  </div>
 </section>
 </main>
 
-<footer><div class="wrap">© <span id="y">2026</span> Алекс Ади ЕООД · ЕИК 206847659 · гр. София · тел. 0894 371 333</div></footer>
-<div class="callbar"><a class="btn" href="tel:+359894371333">Обади се: 0894 371 333</a></div>
+<footer><div class="wrap"><span class="fc">© <span id="y">2026</span> Алекс Ади ЕООД</span><span class="fm">Изработка: <a href="https://hackera.online" target="_blank" rel="noopener">hackera.online</a></span></div></footer>
+<button class="callfab" type="button" id="callbtn" aria-label="Обади се" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></button>
+<div class="csheet" id="csheet" hidden><div class="cs-back" id="csback"></div><div class="cs-box" role="dialog" aria-label="Свържете се с нас">
+ <a class="btn" href="viber://chat?number=%2B359894371333">Viber</a>
+ <a class="btn" href="https://wa.me/359894371333" target="_blank" rel="noopener">WhatsApp</a>
+ <a class="btn" href="tel:+359894371333">Телефонно обаждане</a>
+ <button class="btn ghost" type="button" id="cscancel">Отказ</button>
+</div></div>
+<style>.csheet{position:fixed;inset:0;z-index:90;display:flex;align-items:flex-end}.csheet[hidden]{display:none}.cs-back{position:absolute;inset:0;background:rgba(0,0,0,.6)}.cs-box{position:relative;width:100%;display:grid;gap:10px;padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));background:var(--ink);border-top:2px solid var(--gold);border-radius:18px 18px 0 0}.cs-box .btn{width:100%}.cs-box{max-width:520px;margin-inline:auto}@media(min-width:861px){.csheet{align-items:center}.cs-box{border:2px solid var(--gold);border-radius:18px}}</style>
+<script>(function(){var s=document.getElementById('csheet');function t(v){s.hidden=!v}
+document.getElementById('callbtn').onclick=function(){t(1)};
+document.getElementById('csback').onclick=document.getElementById('cscancel').onclick=function(){t(0)};
+s.addEventListener('click',function(e){if(e.target.tagName==='A')setTimeout(function(){t(0)},300)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')t(0)})})()</script>
 <script>
 (function(){var b=document.querySelector('.menu'),n=document.getElementById('nav');
 function c(){n.classList.remove('open');b.setAttribute('aria-expanded','false')}
@@ -362,5 +633,24 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')c()});
 window.addEventListener('resize',function(){if(innerWidth>860)c()});
 document.getElementById('y').textContent=new Date().getFullYear()})()
 </script>
+<script>(function(){var s=document.getElementById('csheet');
+document.querySelectorAll('a.hphone,.cta a[href^="tel:"],.split a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();s.hidden=false})})})()</script><script>(function(){var d=document.getElementById('damaski');if(!d)return;var n=document.getElementById('dname'),sv=d.querySelector('.dsofa');
+d.querySelectorAll('.sw').forEach(function(b){b.onclick=function(){d.querySelectorAll('.sw').forEach(function(x){x.classList.remove('on')});b.classList.add('on');sv.style.setProperty('--fab',b.dataset.c);n.textContent=b.dataset.n}});
+sv.style.setProperty('--fab','#7d1f3a');
+d.querySelectorAll('.cta a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(e){var s=document.getElementById('csheet');if(s){e.preventDefault();s.hidden=false}})})})()</script><script>(function(){[].forEach.call(document.querySelectorAll('.vw'),function(w){var b=w.querySelector('.pl');function go(){var s=w.getAttribute('data-src'),v=document.createElement('video');v.controls=true;v.autoplay=true;v.playsInline=true;v.setAttribute('playsinline','');
+if(s.indexOf('data:')===0){try{var p=s.split(','),bin=atob(p[1]),a=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)a[i]=bin.charCodeAt(i);s=URL.createObjectURL(new Blob([a],{type:'video/mp4'}))}catch(e){}}
+v.src=s;w.appendChild(v);b.style.display='none';var r=v.play();if(r&&r.catch)r.catch(function(){})}
+b.addEventListener('click',go);w.querySelector('img').addEventListener('click',go)})})()</script>
+<div id="lbx" role="dialog" aria-modal="true" aria-label="Снимка на цял екран"><button class="x" aria-label="Затвори">&times;</button><button class="p" aria-label="Предишна">&#8249;</button><img alt=""><button class="n" aria-label="Следваща">&#8250;</button></div>
+<script>(function(){var box=document.getElementById('lbx'),im=box.querySelector('img'),list=[],i=0;
+var sel='.grid .svc img,.photo img,.mas img,.ba img,.awards img';
+function show(){var a=list[i];im.src=a.currentSrc||a.src;im.alt=a.alt||''}
+function open(el){var g=el.closest('.grid,.mas,.ba,.awards,.photo')||document;list=[].slice.call(g.querySelectorAll('img'));i=list.indexOf(el);if(i<0){list=[el];i=0}box.classList.toggle('single',list.length<2);show();box.classList.add('on');document.body.style.overflow='hidden'}
+function close(){box.classList.remove('on');document.body.style.overflow='';im.removeAttribute('src')}
+function step(d){i=(i+d+list.length)%list.length;show()}
+[].forEach.call(document.querySelectorAll(sel),function(el){el.classList.add('zoomable');el.addEventListener('click',function(e){e.preventDefault();open(el)})});
+box.addEventListener('click',function(e){if(e.target.closest('.p')){step(-1)}else if(e.target.closest('.n')){step(1)}else if(e.target!==im){close()}});
+document.addEventListener('keydown',function(e){if(!box.classList.contains('on'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')step(-1);else if(e.key==='ArrowRight')step(1)});
+})()</script>
 </body>
 </html>
