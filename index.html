@@ -396,6 +396,14 @@ section.band:not([id]) .steps h3{color:var(--gold2)}section.band:not([id]) .step
 .contact{border-top-color:var(--cu)}
 .cfab{background:linear-gradient(180deg,#f0a773,#c4672f 60%,#a04f1c);color:#fff}
 
+.awards{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:18px;align-items:stretch}
+.awards figure{aspect-ratio:1/1!important;display:block!important;min-width:0}
+.awards img,.awards figure img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 45%;display:block}
+@media(max-width:700px){.awards{grid-template-columns:1fr!important;gap:14px}}
+.ba{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:18px;align-items:stretch}
+.ba figure{aspect-ratio:4/5!important;display:block!important;min-width:0}
+body .ba figure img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 50%;display:block}
+@media(max-width:700px){.ba{grid-template-columns:1fr!important;gap:14px}}
 .zoomable{cursor:zoom-in}
 #lbx{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px}
 #lbx.on{display:flex}
@@ -404,6 +412,8 @@ section.band:not([id]) .steps h3{color:var(--gold2)}section.band:not([id]) .step
 #lbx button:hover{background:rgba(255,255,255,.25)}
 #lbx .x{top:14px;right:14px}#lbx .p{left:14px;top:50%;transform:translateY(-50%)}#lbx .n{right:14px;top:50%;transform:translateY(-50%)}
 #lbx.single .p,#lbx.single .n{display:none}
+footer .wrap{flex-direction:row!important;justify-content:space-between!important;align-items:center!important;text-align:left!important;gap:12px 16px;flex-wrap:wrap}
+footer .fm{border-top:0!important;padding-top:0!important;width:auto!important;text-align:right}
 </style>
 </head>
 <body>
