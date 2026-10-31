@@ -404,6 +404,17 @@ section.band:not([id]) .steps h3{color:var(--gold2)}section.band:not([id]) .step
 .ba figure{aspect-ratio:4/5!important;display:block!important;min-width:0}
 body .ba figure img{width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 50%;display:block}
 @media(max-width:700px){.ba{grid-template-columns:1fr!important;gap:14px}}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:18px;margin-top:30px}
+.rc{margin:0;padding:20px;border-radius:14px;border:1.5px solid rgba(212,169,79,.45);background:rgba(255,255,255,.03);display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;min-width:0}
+@media(max-width:1100px){.rv{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.rv{grid-template-columns:1fr}}
+@media(max-width:350px){.rv .rc{padding:16px}.rv .rc p{font-size:.8rem}}
+.rc .rh{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rc .rav{width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1204;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.rc .rn{font-weight:600;line-height:1.25}
+.rc .rg{font-size:.75rem;color:var(--muted)}
+.rc .st{color:var(--gold2);letter-spacing:2px;font-size:.95rem;margin-bottom:8px}
+.rc p{margin:0;color:var(--muted);line-height:1.5;font-size:.95rem;flex:1;display:flex;align-items:center}
 .zoomable{cursor:zoom-in}
 #lbx{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px}
 #lbx.on{display:flex}
@@ -415,6 +426,8 @@ body .ba figure img{width:100%!important;height:100%!important;aspect-ratio:auto
 footer .wrap{flex-direction:row!important;justify-content:space-between!important;align-items:center!important;text-align:left!important;gap:12px 16px;flex-wrap:wrap}
 footer .fm{border-top:0!important;padding-top:0!important;width:auto!important;text-align:right}
 @media(max-width:600px){footer .wrap{flex-wrap:nowrap!important;gap:8px!important}footer{font-size:.72rem!important}footer .fc,footer .fm{white-space:nowrap}}
+footer .wrap.fyw{justify-content:center!important;text-align:center!important;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(212,169,79,.25)}
+footer .fy{color:var(--gold2);font-weight:600;letter-spacing:.02em}
 </style>
 </head>
 <body>
@@ -422,7 +435,7 @@ footer .fm{border-top:0!important;padding-top:0!important;width:auto!important;t
  <div class="wrap nav">
   <a class="brand gold" href="/" aria-label="Алекс Ади – начало"><img src="/assets/logo.jpg" alt="Лого на Алекс Ади" width="48" height="48"></a>
   <nav id="nav" aria-label="Основна навигация"><ul>
-   <li><a href="#uslugi">Услуги</a></li><li><a href="#materiali">Материали</a></li><li><a href="#damaski">Дамаски</a></li><li><a href="#zashto">Защо ние</a></li><li><a href="#galeria">Работата ни</a></li><li><a href="#predi">Преди и след</a></li><li><a href="#video">Видео</a></li><li><a href="#vaprosi">Въпроси</a></li><li><a href="#kontakti">Контакти</a></li>
+   <li><a href="#uslugi">Услуги</a></li><li><a href="#materiali">Материали</a></li><li><a href="#damaski">Дамаски</a></li><li><a href="#zashto">Защо ние</a></li><li><a href="#galeria">Работата ни</a></li><li><a href="#predi">Преди и след</a></li><li><a href="#video">Видео</a></li><li><a href="#otzivi">Отзиви</a></li><li><a href="#vaprosi">Въпроси</a></li><li><a href="#kontakti">Контакти</a></li>
   </ul></nav>
   <a class="btn hphone" href="tel:+359894371333"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Обади се</a>
   <button class="menu" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
@@ -591,6 +604,14 @@ footer .fm{border-top:0!important;padding-top:0!important;width:auto!important;t
  </div>
 </section>
 
+<section class="band" id="otzivi">
+ <div class="wrap">
+  <h2 class="gold">Отзиви от клиенти</h2><div class="orn"><i></i></div>
+  <p class="lead">Реални отзиви от нашите клиенти в Google.</p>
+  <div class="rv"><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">И</span><div><div class="rn">Ирена Богдански</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Бързо и качествено претапициране на табла за спалня. Още на същия ден дойдоха и взеха таблата, след няколко дни беше готова. Изглежда наистина добре.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">M</span><div><div class="rn">maya may</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Бързо и качествено изпълнение, любезно обслужване, разумни цени. Много съм доволна, горещо препоръчвам.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">R</span><div><div class="rn">Rositsa Vaneva</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Отлична работа с претапициране на кожена спалня. Бързо и много качествено. Препоръчвам</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">A</span><div><div class="rn">Angel Ivanov</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Бърза работа и безкомпромисно качество, няма да съжалявате, ако изберете тези момчета за тапицерски услуги.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">С</span><div><div class="rn">Светослав Иванов</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Доволен съм изключително много, от изпълнението и бързината на това, което исках и направи човека. ПРЕПОРЪЧВАМ</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">V</span><div><div class="rn">Violeta Gerginova</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Здравейте! Ако някои има нужда от тапицер. горещо Ви препоръчвам този адрес. Работят бързо. много качествено и на добра цена.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">M</span><div><div class="rn">Martin Penchev</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Изключителен професионализъм. Горещо препоръчвам да ползвате техните услуги!!!</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">T</span><div><div class="rn">Todor Ivanov</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Отговорни, чудесни, горещо препоръчвам! Много сме доволни от техните услуги! Имаме два прекрасни претапицирани дивана.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">A</span><div><div class="rn">anna-maria peychinova</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Най-добрият тапицерски екип в София. 30 годишни италиански дивани ги направиха по-добре от оригиналния им вид. Препоръчваме с две ръце.</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">M</span><div><div class="rn">Maria Mladenova</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Изключително професионално изпълнение. Диванът ми изглежда значително по-добре от оригиналната версия. Много добра работа, коректно отношение., горещо препоръчвам!</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">D</span><div><div class="rn">Dinko Димитров</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Много добър майстор и професионалист. Работи качествено, прецизно и коректно. Препоръчвам го с две ръце!</p></article><article class="rc"><div class="rh"><span class="rav" aria-hidden="true">Е</span><div><div class="rn">Елена Георгиева</div><div class="rg">Отзив от Google</div></div></div><div class="st" role="img" aria-label="5 от 5 звезди">★★★★★</div><p>Прекрасни момчета- бързи, точни и високо качество. Препоръчвам!</p></article></div>
+ </div>
+</section>
+
 <section id="vaprosi">
  <div class="wrap">
   <h2 class="gold">Често задавани въпроси</h2><div class="orn"><i></i></div>
@@ -621,7 +642,7 @@ footer .fm{border-top:0!important;padding-top:0!important;width:auto!important;t
 </section>
 </main>
 
-<footer><div class="wrap"><span class="fc">© <span id="y">2026</span> Алекс Ади ЕООД</span><span class="fm">Изработка: <a href="https://hackera.online" target="_blank" rel="noopener">hackera.online</a></span></div></footer>
+<footer><div class="wrap fyw"><span class="fy">Работим в бранша от около 15 години.</span></div><div class="wrap"><span class="fc">© <span id="y">2026</span> Алекс Ади ЕООД</span><span class="fm">Изработка: <a href="https://hackera.online" target="_blank" rel="noopener">hackera.online</a></span></div></footer>
 <button class="callfab" type="button" id="callbtn" aria-label="Обади се" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></button>
 <div class="csheet" id="csheet" hidden><div class="cs-back" id="csback"></div><div class="cs-box" role="dialog" aria-label="Свържете се с нас">
  <a class="btn" href="viber://chat?number=%2B359894371333">Viber</a>
